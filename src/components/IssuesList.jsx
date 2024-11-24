@@ -12,13 +12,14 @@ export default function IssuesList() {
       {issuesQuery.isLoading ? (
         <p>Loading...</p>
       ) : (
-        <ul className="issues-list">
+        <ul className="issues-lis
+        t">
           {issuesQuery.data.map((issue) => (
             <IssueItem
               key={issue.id}
               title={issue.title}
               number={issue.number}
-              assisnee={issue.assisnee}
+              assignee={issue.assignee}
               commentCount={issue.comments.length}
               createdBy={issue.createdBy}
               createdDate={issue.createdDate}
